@@ -1,3 +1,4 @@
+import random
 class BankAccount():
 
     bank_title = "Bank of Bolivia"
@@ -6,6 +7,8 @@ class BankAccount():
         self.customer_name = customer_name
         self.current_balance = current_balance
         self.minimum_balance = minimum_balance
+        self.__account_number = random.randint(10000, 99999)
+        self._routing_number = random.randint(10000, 99999)
 
     def deposit(self, deposit_amount):
         self.current_balance += deposit_amount
